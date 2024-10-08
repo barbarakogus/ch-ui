@@ -93,7 +93,6 @@ const InfoTab: React.FC<InfoTabProps> = ({ database, tableName }) => {
   if (error) {
     return (
       <Alert variant="destructive">
-        <AlertCircle className="h-4 w-4" />
         <AlertTitle>Error</AlertTitle>
         <AlertDescription>{error}</AlertDescription>
       </Alert>

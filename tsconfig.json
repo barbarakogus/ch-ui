@@ -1,0 +1,12 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "jsx": "react-jsx",
+    "baseUrl": ".",
+    "target": "ES5", // or ES6, or any other target as needed
+    "lib": ["DOM", "ES2015", "ES2017"], // Add "ES2015" or "ES6" to include Promise support
+    "paths": {
+      "@/*": ["./src/*"]
+    }
+  }
+}
