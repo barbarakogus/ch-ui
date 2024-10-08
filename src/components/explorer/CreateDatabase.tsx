@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useRef } from "react";
 import { z } from "zod";
 import { CopyIcon, CopyCheck } from "lucide-react";
 import {
@@ -71,22 +71,6 @@ const CreateDatabase = () => {
 
   // Ref for SQL copy button tooltip (optional)
   const copyButtonRef = useRef<HTMLButtonElement | null>(null);
-
-  // Effect to reset fields when modal is opened
-  //useEffect(() => {
-  //  if (isCreateDatabaseModalOpen) {
-  //    setDatabaseName("");
-  //    setIfNotExists(false);
-  //    setOnCluster(false);
-  //    setClusterName("");
-  //    setEngine("Atomic");
-  //    setComment("");
-  //    setSql("");
-  //    setErrors({});
-  //    setCreateDatabaseError("");
-  //    setStatementCopiedToClipboard(false);
-  //  }
-  //}, [isCreateDatabaseModalOpen]);
 
   // Validate if the database name is unique unless IF NOT EXISTS is checked
   const validateDatabaseName = (name: string): boolean => {
@@ -285,7 +269,7 @@ const CreateDatabase = () => {
           <SheetHeader>
             <SheetTitle>Create Database</SheetTitle>
           </SheetHeader>
-          
+
           <div className="space-y-4">
             {/* Database Name */}
             <div className="space-y-2">
